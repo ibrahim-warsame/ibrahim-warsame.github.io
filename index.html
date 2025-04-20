@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Warsame - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahim Warsame | Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" href="logo.png" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Ibrahim Warsame</h1>
-            <p>Software Engineer | Cloud Enthusiast | AI Advocate</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="logo">Ibrahim</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="dark-toggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a Computer Science student and aspiring Software Engineer focused on building real-world solutions with clean, scalable code.</p>
-        </div>
-    </section>
+  <section class="hero">
+    <h1>Hi, I’m Ibrahim Warsame</h1>
+    <p>Software Engineer | Building Clean & Scalable Tech</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-card">
-                <h3>AI Resume Analyzer</h3>
-                <p>A machine learning tool to analyze resumes based on job descriptions and provide scores.</p>
-            </div>
-            <div class="project-card">
-                <h3>Smart Notes App</h3>
-                <p>A full-stack React application that allows users to create, manage, and search notes with authentication using Firebase.</p>
-            </div>
-        </div>
-    </section>
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate software engineer with experience in building modern web applications, APIs, and automation workflows. Always learning, always building.
+    </p>
+  </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/ibrahim-warsame" target="_blank">linkedin.com/in/ibrahim-warsame</a></p>
-        </div>
-    </section>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Project Name</h3>
+        <p>Brief description of what it does.</p>
+        <a href="https://github.com/ibrahim-warsame/project" target="_blank">GitHub</a>
+      </div>
+      <!-- Duplicate above div for more projects -->
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Ibrahim Warsame</p>
-        </div>
-    </footer>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email me at: <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a></p>
+    <p>Connect on <a href="https://linkedin.com/in/ibrahim-warsame" target="_blank">LinkedIn</a></p>
+  </section>
 
-    <script src="scripts.js"></script>
-    </body>
+  <footer class="footer">
+    <p>&copy; 2025 Ibrahim Warsame. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
 </html>
