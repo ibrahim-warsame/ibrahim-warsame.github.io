@@ -1,62 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibrahim Warsame | Software Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <link rel="icon" href="logo.png" />
+  <title>Ibrahim Warsame | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    :root {
+      --bg: linear-gradient(145deg, #f8fafc, #e2e8f0);
+      --text: #1a202c;
+      --primary: #4f46e5;
+      --secondary: #06b6d4;
+      --card-bg: #ffffffee;
+      --radius: 1rem;
+    }
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --card-bg: #1e293b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 4px solid var(--primary);
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    nav {
+      margin-top: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fbbf24;
+    }
+    .toggle-theme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section {
+      background: var(--card-bg);
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section ul li::before {
+      content: "\2022";
+      color: var(--secondary);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    a.btn {
+      background: var(--secondary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    a.btn:hover {
+      background: var(--primary);
+    }
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="logo">Ibrahim</div>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Ibrahim Warsame</h1>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="dark-toggle">🌙</button></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certificates</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="toggle-theme" onclick="toggleTheme()">🌓 Toggle Theme</button>
   </header>
 
-  <section class="hero">
-    <h1>Hi, I’m Ibrahim Warsame</h1>
-    <p>Software Engineer | Building Clean & Scalable Tech</p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-  </section>
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>I’m a software engineer who combines strong backend development skills with a deep interest in AI/ML. I build intelligent applications and love tackling real-world challenges with clean, scalable code.</p>
+    </section>
+    <section id="skills" data-aos="fade-right">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> JavaScript, Python, Java, SQL, HTML, CSS</li>
+        <li><strong>Frameworks:</strong> React, Node.js, Spring Boot, Flask</li>
+        <li><strong>Tools:</strong> Git, Docker, Figma, Linux CLI</li>
+        <li><strong>Concepts:</strong> AI/ML, OOP, REST APIs, System Design</li>
+      </ul>
+    </section>
+    <section id="projects" data-aos="fade-left">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Health Coach App:</strong> AI fitness app for personalized workouts (React, TensorFlow.js)</li>
+        <li><strong>Traffic Management System:</strong> Dynamic AI-controlled traffic lights (OpenCV, Python)</li>
+        <li><strong>Tutoring Platform:</strong> Personalized AI tutor (Flask, Python, React)</li>
+      </ul>
+    </section>
+    <section id="certs" data-aos="zoom-in">
+      <h2>Certificates</h2>
+      <ul>
+        <li>🎓 Azure AI Engineer Associate – Microsoft</li>
+        <li>🏅 Harvard Aspire Leadership Program</li>
+        <li>🌍 Guinness World Record – Microsoft AI Challenge Participant</li>
+        <li>🌐 Microsoft Student Learn Ambassador</li>
+      </ul>
+    </section>
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/ibrahim-warsame" target="_blank">github.com/ibrahim-warsame</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/ibrahim-warsame" target="_blank">linkedin.com/in/ibrahim-warsame</a></p>
+      <a class="btn" href="https://drive.google.com/file/d/1AsI9GCrfbix6pk6GM3Dl_yWHDYInVY3D/view?usp=sharing" target="_blank">View Resume</a>
+    </section>
+  </main>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm a passionate software engineer with experience in building modern web applications, APIs, and automation workflows. Always learning, always building.
-    </p>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Project Name</h3>
-        <p>Brief description of what it does.</p>
-        <a href="https://github.com/ibrahim-warsame/project" target="_blank">GitHub</a>
-      </div>
-      <!-- Duplicate above div for more projects -->
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email me at: <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a></p>
-    <p>Connect on <a href="https://linkedin.com/in/ibrahim-warsame" target="_blank">LinkedIn</a></p>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Ibrahim Warsame. Built with HTML, CSS, and JavaScript.</p>
+  <footer>
+    <p>&copy; <span id="year"></span> Ibrahim Warsame. Built with ❤️ and curiosity.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    });
+  </script>
 </body>
 </html>
