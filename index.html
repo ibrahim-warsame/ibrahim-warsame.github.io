@@ -1,206 +1,180 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibrahim Warsame | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    :root {
-      --bg: linear-gradient(145deg, #f8fafc, #e2e8f0);
-      --text: #1a202c;
-      --primary: #4f46e5;
-      --secondary: #06b6d4;
-      --card-bg: #ffffffee;
-      --radius: 1rem;
-    }
-    [data-theme="dark"] {
-      --bg: #0f172a;
-      --text: #f1f5f9;
-      --card-bg: #1e293b;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-    header {
-      background: linear-gradient(to right, var(--primary), var(--secondary));
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-      border-bottom: 4px solid var(--primary);
-      position: relative;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    nav {
-      margin-top: 1.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #fbbf24;
-    }
-    .toggle-theme {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    section {
-      background: var(--card-bg);
-      margin: 2rem 0;
-      padding: 2rem;
-      border-radius: var(--radius);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
-    section h2 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    section ul li::before {
-      content: "\2022";
-      color: var(--secondary);
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-    a.btn {
-      background: var(--secondary);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-    a.btn:hover {
-      background: var(--primary);
-    }
-    footer {
-      text-align: center;
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: column;
-      }
-      nav a {
-        margin: 0.3rem 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Warsame | Full-Stack Developer & AI Specialist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1>Ibrahim Warsame</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certs">Certificates</a>
-      <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Ibrahim Warsame</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
-    <button class="toggle-theme" onclick="toggleTheme()">🌓 Toggle Theme</button>
-  </header>
 
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <p>I’m a software engineer who combines strong backend development skills with a deep interest in AI/ML. I build intelligent applications and love tackling real-world challenges with clean, scalable code.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Ibrahim Warsame</span></h1>
+                <h2>Full-Stack Developer & AI Specialist</h2>
+                <p>Building innovative digital solutions with expertise in web development, cloud technologies, and artificial intelligence.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/profile.jpg" alt="Ibrahim Warsame">
+            </div>
+        </div>
     </section>
-    <section id="skills" data-aos="fade-right">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> JavaScript, Python, Java, SQL, HTML, CSS</li>
-        <li><strong>Frameworks:</strong> React, Node.js, Spring Boot, Flask</li>
-        <li><strong>Tools:</strong> Git, Docker, Figma, Linux CLI</li>
-        <li><strong>Concepts:</strong> AI/ML, OOP, REST APIs, System Design</li>
-      </ul>
-    </section>
-    <section id="projects" data-aos="fade-left">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Health Coach App:</strong> AI fitness app for personalized workouts (React, TensorFlow.js)</li>
-        <li><strong>Traffic Management System:</strong> Dynamic AI-controlled traffic lights (OpenCV, Python)</li>
-        <li><strong>Tutoring Platform:</strong> Personalized AI tutor (Flask, Python, React)</li>
-      </ul>
-    </section>
-    <section id="certs" data-aos="zoom-in">
-      <h2>Certificates</h2>
-      <ul>
-        <li>🎓 Azure AI Engineer Associate – Microsoft</li>
-        <li>🏅 Harvard Aspire Leadership Program</li>
-        <li>🌍 Guinness World Record – Microsoft AI Challenge Participant</li>
-        <li>🌐 Microsoft Student Learn Ambassador</li>
-      </ul>
-    </section>
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/ibrahim-warsame" target="_blank">github.com/ibrahim-warsame</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ibrahim-warsame" target="_blank">linkedin.com/in/ibrahim-warsame</a></p>
-      <a class="btn" href="https://drive.google.com/file/d/1AsI9GCrfbix6pk6GM3Dl_yWHDYInVY3D/view?usp=sharing" target="_blank">View Resume</a>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Ibrahim Warsame. Built with ❤️ and curiosity.</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/profile.jpg" alt="Ibrahim Warsame">
+                </div>
+                <div class="about-text">
+                    <h3>Computer Science Student & Tech Enthusiast</h3>
+                    <p>I'm currently pursuing my Bachelor's degree in Computer Science with a concentration in Artificial Intelligence and Machine Learning at IU International University of Applied Sciences, maintaining a 3.5 GPA.</p>
+                    
+                    <div class="skills-section">
+                        <h4>Technical Skills</h4>
+                        <div class="skills-tags">
+                            <!-- Skills will be added here -->
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/ibrahim-warsame" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/ibrahim-warsame-a929262aa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:ibrahimali.wr@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    document.getElementById("year").textContent = new Date().getFullYear();
-    function toggleTheme() {
-      const html = document.documentElement;
-      const theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      html.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-      const savedTheme = localStorage.getItem("theme") || "light";
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    });
-  </script>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <!-- Experience items will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project items will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:ibrahimali.wr@gmail.com">ibrahimali.wr@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+254722147385">+254 722 147 385</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-section">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/ibrahim-warsame" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/ibrahim-warsame-a929262aa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Ibrahim Warsame</h3>
+                    <p>Full-Stack Developer & AI Specialist</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/ibrahim-warsame" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ibrahim-warsame-a929262aa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:ibrahimali.wr@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© <span id="currentYear"></span> Ibrahim Warsame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
